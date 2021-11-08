@@ -7,6 +7,7 @@
 #include <stdbool.h>	/* bool, true, false */
 #include "dfs.h"
 
+// precondition stack har stack->node = root og stack->next = NULL (se eventuelt main for at se input)
 bool DFS(stack* top, int s) {
 
 	struct stack* temp = (struct stack*)malloc(sizeof(struct stack));

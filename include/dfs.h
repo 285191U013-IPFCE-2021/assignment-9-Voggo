@@ -9,6 +9,12 @@ typedef struct node
 } node;
 
 
+typedef struct stack
+{
+  struct node *node;
+  struct stack *next;
+} stack;
+
 node *make_node (int num, node * left, node * right);
 
 void free_node (node * p);
@@ -17,21 +23,17 @@ void print_node (node * p);
 
 void print_tree (node * p, int depth);
 
-void DFT (node * root);
+bool DFT (node * root);
 
-typedef struct stack
-{
-  struct node *node;
-  struct stack *next;
-} stack;
+bool DFS(stack* top, int s);
 
 
-stack *push (stack * topp, node * node);
+void push (stack ** topp, node * node);
 
 bool isEmpty (stack * topp);
 
 node *top (stack * topp);
 
-stack *pop (stack * topp);
+void pop (stack ** topp);
 
 void print_stack (stack * topp);

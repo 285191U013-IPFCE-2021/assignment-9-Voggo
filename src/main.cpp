@@ -1,9 +1,9 @@
-//extern "C" 
+extern "C" {
 #include <stdio.h>		/* scanf, printf */
 #include <stdlib.h>		/* abort */
 #include <stdbool.h>	/* bool, true, false */
 #include "dfs.h"
-    // Add the header files required to run your main 
+}// Add the header files required to run your main 
 
 
 // File for sandboxing and trying out code
@@ -30,17 +30,17 @@ int main(int argc, char** argv) {
             NULL));
     // Print Tree
     int s = 0;
-	printf("enter number to search for:\n");
-	scanf("%d", &s);
+    printf("enter number to search for:\n");
+    scanf("%d", &s);
     printf("_________\n");
-	struct stack* stack =(struct stack*) malloc(sizeof(struct stack));
-	stack->node = root;
+    struct stack* stack = (struct stack*)malloc(sizeof(struct stack));
+    stack->node = root;
     stack->next = NULL;
 
     if (DFS(stack, s))
         printf("true");
-    else 
+    else
         printf("false");
-    
+
     return 0;
 }

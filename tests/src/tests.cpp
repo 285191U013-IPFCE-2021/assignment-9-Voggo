@@ -57,5 +57,5 @@ TEST_CASE("tree")
 				     NULL,
 				     NULL));
     // Print Tree
-    // DFT(root);
+    DFT(root);
 }

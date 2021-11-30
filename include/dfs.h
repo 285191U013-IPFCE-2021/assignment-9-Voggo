@@ -23,7 +23,7 @@ void print_node (node * p);
 
 void print_tree (node * p, int depth);
 
-bool DFT (node * root);
+void DFT (node * root);
 
 bool DFS(stack* top, int s);
 

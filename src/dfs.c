@@ -42,6 +42,22 @@ bool DFS(stack* top, int s) {
 
 }
 
+void DFT(node* root) {
+
+	int s = 0;
+	printf("enter number to search for:\n");
+	scanf("%d", &s);
+	printf("_________\n");
+	struct stack* stack = (struct stack*)malloc(sizeof(struct stack));
+	stack->node = root;
+	stack->next = NULL;
+
+	if (DFS(stack, s))
+		printf("true");
+	else
+		printf("false");
+}
+
 node* make_node(int num, node* left, node* right)
 {
 	node* new_node = malloc(sizeof(node));
